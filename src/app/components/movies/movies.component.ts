@@ -10,7 +10,7 @@ export class MoviesComponent {
   movies: Movie[] = [
     {
       id: '1',
-      title: 'Avatar el camino del agua',
+      title: 'Avatar el camino del agua1',
       rating: 5,
       image: './assets/images/avatar.jpg',
       genre: 'fiction',
@@ -19,7 +19,7 @@ export class MoviesComponent {
     },
     {
       id: '1',
-      title: 'Avatar el camino del agua',
+      title: 'Avatar el camino del agua2',
       rating: 5,
       image: './assets/images/avatar.jpg',
       genre: 'fiction',
@@ -28,7 +28,7 @@ export class MoviesComponent {
     },
     {
       id: '1',
-      title: 'Avatar el camino del agua',
+      title: 'Avatar el camino del agua3',
       rating: 5,
       image: './assets/images/avatar.jpg',
       genre: 'fiction',
@@ -37,7 +37,7 @@ export class MoviesComponent {
     },
     {
       id: '1',
-      title: 'Avatar el camino del agua',
+      title: 'Avatar el camino del agua4',
       rating: 5,
       image: './assets/images/avatar.jpg',
       genre: 'fiction',
@@ -46,7 +46,7 @@ export class MoviesComponent {
     },
     {
       id: '1',
-      title: 'Avatar el camino del agua',
+      title: 'Avatar el camino del agua5',
       rating: 5,
       image: './assets/images/avatar.jpg',
       genre: 'fiction',

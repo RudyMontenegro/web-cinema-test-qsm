@@ -7,6 +7,8 @@ import { Movie } from './../../models/movie.model';
   styleUrls: ['./movie.component.scss']
 })
 export class MovieComponent {
+  getDominantColor = '#00000'
+  showMovieDetail = false;
   @Input('movieCH')
    movie: Movie = {
     id: '',
@@ -16,5 +18,8 @@ export class MovieComponent {
     genre: '',
     sysnopsis: '',
     date: new Date(),
+  }
+  onShowDetail(){
+    this.showMovieDetail = !this.showMovieDetail;
   }
 }

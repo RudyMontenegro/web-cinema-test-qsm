@@ -5,6 +5,18 @@
     <div
         class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
         <h2>Pelicular : {{ movie.title }}</h2> 
-        
+        <button (click)="onShowDetail()">Ver detalle</button>
     </div>
 </div>
+
+<!-- cortina de detalles -->
+<div class="product-detail" [class.active]="showMovieDetail">
+    <div >
+      <button (click)="onShowDetail()">Close</button>
+
+      <h1>{{ movie.title }}</h1>
+      <!-- swipper -->
+      <p>{{ movie.sysnopsis }}</p>
+      
+    </div>
+  </div>
