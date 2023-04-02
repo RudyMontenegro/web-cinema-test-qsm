@@ -7,10 +7,10 @@ import { Movie } from './../../models/movie.model';
   styleUrls: ['./movie.component.scss']
 })
 export class MovieComponent {
-  getDominantColor = '#00000'
+   
   showMovieDetail = false;
-  @Input('movieCH')
-   movie: Movie = {
+  
+  @Input("movieCH") movie: Movie = {
     id: '',
     title: '',
     image: '',
@@ -19,7 +19,13 @@ export class MovieComponent {
     sysnopsis: '',
     date: new Date(),
   }
+  ngOnChanges(){
+
+   
+  }
+
   onShowDetail(){
     this.showMovieDetail = !this.showMovieDetail;
   }
 }
+
