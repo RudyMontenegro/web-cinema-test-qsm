@@ -1,20 +1,43 @@
 <div class="container">
-<section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
-  <div class="portfolio__title flex flex-column gap-3 text-center">
-    <h1 class="text-3xl md:text-5xl">Carteleras</h1>
-    <p class="text-gray-400 text-sm md:text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum odit ab mollitia optio quod
-      recusandae placeat aliquam veniam officiis cum quam eum architecto quidem, nobis commodi consequatur
-      distinctio ullam non.
-    </p>
-  </div>
-  <div class="portfolio__gallery">
-    <!-- Aqui poner filtro -->
-    <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-1">
-      
-        <app-movie *ngFor="let movie of movies" [movieCH]="movie"></app-movie>
-      
+  <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
+    <div class="portfolio__title flex flex-column gap-3 text-center">
+      <h1 class="text-3xl md:text-5xl">Carteleras</h1>
+      <p class="text-gray-400 text-sm md:text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum odit ab mollitia optio quod
+        recusandae placeat aliquam veniam officiis cum quam eum architecto quidem, nobis commodi consequatur
+        distinctio ullam non.
+      </p>
     </div>
-  </div>
-</section>
+    <div class="portfolio__gallery">
+      <!-- Aqui poner filtro -->
+      <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-1">
+        <div class="project__card" *ngFor="let movie of movieArray">
+          <img [src]="movie.image">
+          <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+
+            <h2>Pelicular : {{ movie.title }}</h2>
+
+            <button (click)="onShowDetail()">Ver detalle</button>
+            <!-- Detalles -->
+            <div class="product-detail" [class.active]="showMovieDetail">
+              <button (click)="onShowDetail()">Close</button>
+              <h1>{{ movie.title }}</h1>
+              <img [src]="movie.image">
+             
+              <p>{{ movie.rating }}</p>
+              <p>{{ movie.genre }}</p>
+              <p>{{ movie.sysnopsis }}</p>
+              <p>{{ movie.date.toDate() | date }}</p>
+              
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
 </div>

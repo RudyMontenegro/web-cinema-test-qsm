@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Movie } from './../../models/movie.model';
 
 @Component({
@@ -6,11 +6,11 @@ import { Movie } from './../../models/movie.model';
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.scss']
 })
-export class MovieComponent {
-  getDominantColor = '#00000'
+export class MovieComponent implements OnChanges {
+  
   showMovieDetail = false;
-  @Input('movieCH')
-   movie: Movie = {
+  
+  @Input() movie: Movie = {
     id: '',
     title: '',
     image: '',
@@ -19,6 +19,11 @@ export class MovieComponent {
     sysnopsis: '',
     date: new Date(),
   }
+  ngOnChanges(){
+
+   
+  }
+
   onShowDetail(){
     this.showMovieDetail = !this.showMovieDetail;
   }
