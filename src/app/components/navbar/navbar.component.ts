@@ -9,6 +9,8 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class NavbarComponent {
 
+  showCreateMovie = false;
+
   onShow(){
   alert("click")
   console.log('click log')
@@ -16,7 +18,15 @@ export class NavbarComponent {
  constructor(
   private movieService: MoviesService
 ) {
+}
+  onSubmit(data: Movie){
+    data.date = new Date(data.date)
+    this.movieService.addMovie(data);
+    console.warn(data)
+  }
 
+onShowCreateMovie(){
+  this.showCreateMovie = !this.showCreateMovie
 }
  createNewMovie(){
   const cMovie : Movie = {
@@ -27,7 +37,7 @@ export class NavbarComponent {
     sysnopsis: 'tesdsdfaw dadwdaw',
     date : new Date(2021, 1, 21)
   }
-  this.movieService.addMovie(cMovie);
+  
   
  }
 }

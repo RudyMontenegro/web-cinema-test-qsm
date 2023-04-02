@@ -6,9 +6,23 @@
         </span>
         <div class="header__info flex align-items-center gap-3">
             <ul class="flex flex-column xl:flex-row list-none">
-                <li  (click)="createNewMovie()">Añadir nueva pelicular
+                <li  (click)="onShowCreateMovie()">Añadir nueva pelicular
                 </li>
             </ul>
         </div>
     </nav>
 </header>
+<div class="product-detail" [class.active]="showCreateMovie">
+    <div >
+      <button (click)="onShowCreateMovie()">Close</button>
+      <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
+        <input type="text" name="title" ngModel> <br>
+        <input type="file" accept=".jpg,.png" name="image" ngModel class="button"/> <br> 
+        <input type="number" name="rating" ngModel> <br>
+        <input type="text" name="genre" ngModel> <br>
+        <input type="date" name="date" ngModel> <br>
+        <input type="text" name="sysnopsis" ngModel> <br>
+        <button type="submit" (click)="onShowCreateMovie()">Guardar</button>
+      </form>
+    </div>
+  </div>

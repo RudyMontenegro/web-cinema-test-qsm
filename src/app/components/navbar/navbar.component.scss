@@ -15,7 +15,29 @@
 .header__info ul li:hover {
     background-color: var(--secondary-bg-color);
 } 
-
+.product-detail {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: 2; 
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out 0.5s;
+    transform: translateX(100%);
+    &.active {
+      transform: translateX(0);
+    }
+  }
+.product-detail img{
+  width: 200px; /*fixer img*/
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
 /* navbar responsiba */
 @media screen and (max-width: 1200px){
     .navbar {
