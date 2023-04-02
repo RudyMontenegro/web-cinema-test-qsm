@@ -9,6 +9,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit  {
+  filterMovie = '';
   showMovieDetail = false;
   public movieArray: Movie[] = [];
   constructor(
