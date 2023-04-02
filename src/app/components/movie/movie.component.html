@@ -15,8 +15,11 @@
       <button (click)="onShowDetail()">Close</button>
 
       <h1>{{ movie.title }}</h1>
+      <img [src]="movie.image" >
       <!-- swipper -->
+      <p>{{ movie.rating }}</p>
+      <p>{{ movie.genre }}</p>
       <p>{{ movie.sysnopsis }}</p>
-      
+      <p>{{ movie.date | date:'shortDate'}}</p>
     </div>
   </div>

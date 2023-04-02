@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  onShow(){
+  alert("click")
+  console.log('click log')
+ }
 }
