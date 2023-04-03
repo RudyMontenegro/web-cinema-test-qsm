@@ -11,6 +11,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
 .product-detail {
     position: fixed;
@@ -34,4 +35,30 @@
   height: 200px;
   object-fit: cover;
   object-position: center;
+}
+/*boton close*/
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.9;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #ffffff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }

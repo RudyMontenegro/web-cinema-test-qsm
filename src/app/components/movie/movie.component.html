@@ -1,25 +1,26 @@
-
 <div class="project__card">
-    <img [src]="movie.image" >
-    <div class="overlay"></div>
-    <div
-        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
-        <h2>Pelicular : {{ movie.title }}</h2> 
-        <button (click)="onShowDetail()">Ver detalle</button>
-    </div>
+  <img [src]="movie.image" (click)="onShowDetail()">
+  <div class="overlay"></div>
+  <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+    <h2> {{ movie.title }}</h2>
+  </div>
 </div>
 
 <!-- cortina de detalles -->
-<div class="product-detail" [class.active]="showMovieDetail">
-    <div >
-      <button (click)="onShowDetail()">Close</button>
+<div class="product-detail flex justify-content-start flex-wrap"
+  [class.active]="showMovieDetail">
+  <a href="#" class="close" (click)="onShowDetail()"></a>
 
-      <h1>{{ movie.title }}</h1>
-      <img [src]="movie.image" >
-      <!-- swipper -->
-      <p>{{ movie.rating }}</p>
+  <div class="card col-12 md:col-6 md:pr-6 pt-0">
+    <div class="flex flex-column card-container green-container">
+      <h1 class="text-3xl md:text-5xl">{{ movie.title }}</h1>
+     
+      <img [src]="movie.image">
+      <p class="text--500">{{ movie.rating }}</p>
+      
       <p>{{ movie.genre }}</p>
       <p>{{ movie.sysnopsis }}</p>
       <p>{{ movie.date.toDate() | date }}</p>
     </div>
   </div>
+</div>
