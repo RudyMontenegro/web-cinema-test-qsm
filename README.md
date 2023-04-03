@@ -1,31 +1,46 @@
-<<<<<<< HEAD
-# web-cinema-QSM
-=======
-# WebCinema
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+<h1>
+  Cinema web
+</h1>
 
-## Development server
+<h4>Prueba Técnica de QSM Solutions<a></h4>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p>
+  <a href="https://angular.io/">
+    <img src="	https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"
+         alt="Gitter">
+  </a>
+  <a href="https://firebase.google.com/?gclid=Cj0KCQjwz6ShBhCMARIsAH9A0qWAPrAPqoS3YC36Bb4q1UwoVNfbgUlZ91BSzMBruPAWzOe7_Vm2iNkaAo46EALw_wcB&gclsrc=aw.ds&hl=es-419"><img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black">
+  </a>
+</p>
 
-## Code scaffolding
+---
+>## Instrucciones para ejecutar la aplicación en entorno local.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecutar git bash o powershell en una carpeta vacía y pegar las siguientes líneas de comando.
 
-## Build
+```bash
+# Clonar el repositorio:
+$ git clone https://github.com/RudyMontenegro/web-cinema-test-qsm.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Entrar a la raíz del proyecto:
+$ cd web-cinema-test-qsm
 
-## Running unit tests
+# Instalar dependencias.
+$ npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Revisar que estés en la rama (main).
+# Correr la aplicación.
+$ ng serve
 
-## Running end-to-end tests
+# Entrar al navegador a la direccion http://localhost:4200/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ 
+```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
->>>>>>> master
+
+
+
+---
+

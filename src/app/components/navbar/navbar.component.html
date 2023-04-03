@@ -12,12 +12,21 @@
         </div>
     </nav>
 </header>
+<!-- añadir nueva pelicua --> 
 <div class="product-detail" [class.active]="showCreateMovie">
     <div >
       <button (click)="onShowCreateMovie()">Close</button>
+
+        <h3>Subir banner</h3>
+
+     <input type="file" accept=".jpg,.png" (change)="uploadImage($event)">
+
+
       <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
         <input type="text" name="title" ngModel> <br>
-        <input type="file" accept=".jpg,.png" name="image" ngModel class="button"/> <br> 
+
+        <!--input type="file" accept=".jpg,.png" name="image" ngModel class="button"/> <br--> 
+
         <input type="number" name="rating" ngModel> <br>
         <input type="text" name="genre" ngModel> <br>
         <input type="date" name="date" ngModel> <br>
