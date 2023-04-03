@@ -28,4 +28,36 @@
       grid-gap: 15px;
     }
   }
-  
+  /*dropdonw*/
+
+$bg: --bg-color;
+$fc: #fff;
+ul, li{ margin: 0; padding: 0;}
+a { transition: all 0.2s ease-in-out; }
+#nav{
+  text-align: center;
+  background-color: $bg;
+  a{ color: $fc; text-decoration: none; }
+  select { color: $fc; text-decoration: none;
+    background-color: var(--bg-color);
+    transition: all 0.2s ease-in-out; 
+  }
+  option {
+    display: inline;
+    position: relative;
+    
+      left:-9999px;  
+  }
+  li{
+    display: inline;
+    position: relative;
+    ul{
+      position: absolute;
+      left:-9999px;      
+    }
+    select{
+      display: inline-block;
+      padding: 20px;
+    }
+    }
+  }

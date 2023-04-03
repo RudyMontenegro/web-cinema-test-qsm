@@ -7,9 +7,25 @@
       recusandae placeat aliquam veniam officiis cum quam eum architecto quidem, nobis commodi consequatur
       distinctio ullam non.
     </p>
-    <input type="text" class="form-control" name="filterMovie" placeholder="Escribir categoria" [(ngModel)]="filterMovie">
+
+    <!-- dropdonw -->
+    <ul id="nav">	
+      Filtrar por:
+      <select [(ngModel)]="categoriaSeleccionada">
+        <option value="">Todas las categorías</option>
+        <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+      </select>
+
+   
+    </ul>
+     
+    <!---->
+
+    <!--input type="text" class="form-control" name="filterMovie" placeholder="Escribir categoria" [(ngModel)]="filterMovie"-->
 
   </div>
+
+  <br>
   <div class="portfolio__gallery">
     <!-- Aqui poner filtro -->
     <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-4">
