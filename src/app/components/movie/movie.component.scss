@@ -13,14 +13,14 @@
     object-position: center;
     cursor: pointer;
 }
-.product-detail {
+.movie__detail  {
     position: fixed;
     top: 0;
     left: 50%;
     bottom: 0;
     right: 0;
     z-index: 2; 
-    background-color: var(--secondary-bg-color);
+    background-color: #1e1e1e;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,11 +30,14 @@
       transform: translateX(0);
     }
   }
-.product-detail img{
+  .card {
+    padding: 3.5rem;
+  }
+.movie__detail  img{
   width: 200px; /*fixer img*/
   height: 200px;
   object-fit: cover;
-  object-position: center;
+  text-align: center;
 }
 /*boton close*/
 .close {

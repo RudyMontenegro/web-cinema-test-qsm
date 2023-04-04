@@ -16,6 +16,7 @@ export class NavbarComponent {
   images: string[];
   urlImg = '';
   imgRefGlo : any;
+  categorias = ["Romance", "Acción", "Ficción", "Terror"];
 
   onShow(){
   alert("click")

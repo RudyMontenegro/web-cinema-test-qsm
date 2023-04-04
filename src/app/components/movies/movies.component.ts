@@ -9,7 +9,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit  {
-  categorias = ["Lacteos", "Panaderia", "Frutas", "Carnes"];
+  categorias = ["Romance", "Acción", "Ficción", "Terror"];
   filterMovie = '';
   showMovieDetail = false;
   public movieArray: Movie[] = [];

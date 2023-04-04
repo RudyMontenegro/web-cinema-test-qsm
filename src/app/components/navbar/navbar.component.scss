@@ -15,14 +15,28 @@
 .header__info ul li:hover {
     background-color: var(--secondary-bg-color);
 } 
-.product-detail {
+/* navbar responsiba */
+@media screen and (max-width: 1200px){
+  .navbar {
+      padding: 0 2rem
+  }
+  .header__info ul li {
+      padding: 0;
+      margin: 2rem 0;
+      cursor: pointer;
+      font-size: x-large;
+      --font-color: #fff;
+  }
+}
+/*Cortia left*/
+.form__newMovie {
     position: fixed;
     top: 0;
     left: 50%;
     bottom: 0;
     right: 0;
     z-index: 2; 
-    background-color: var(--secondary-bg-color);
+    background-color: #1e1e1e ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -31,23 +45,52 @@
     &.active {
       transform: translateX(0);
     }
+   
   }
-.product-detail img{
+.text-color{
+  color: #fff !important;
+}
+.input__form{
+  padding-left: 2px !important;
+}
+.surface-overlay {
+    background-color: #1e1e1e !important;
+}
+
+.card {
+  padding: 3.5rem;
+}
+.form__newMovie img{
   width: 200px; /*fixer img*/
   height: 200px;
   object-fit: cover;
   object-position: center;
 }
-/* navbar responsiba */
-@media screen and (max-width: 1200px){
-    .navbar {
-        padding: 0 2rem
-    }
-    .header__info ul li {
-        padding: 0;
-        margin: 2rem 0;
-        cursor: pointer;
-        font-size: x-large;
-        --font-color: #fff;
-    }
-}
+
+/*boto close*/
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.9;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #ffffff;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  

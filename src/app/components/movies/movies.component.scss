@@ -42,6 +42,11 @@ a { transition: all 0.2s ease-in-out; }
     background-color: var(--bg-color);
     transition: all 0.2s ease-in-out; 
   }
+  input {
+    color: $fc; text-decoration: none;
+     background-color: var(--bg-color);
+     placeholder { color: rgb(255, 255, 255); }
+  }
   option {
     display: inline;
     position: relative;

@@ -10,24 +10,17 @@
 
     <!-- dropdonw -->
     <ul id="nav">	
-      Filtrar por:
-      <select [(ngModel)]="categoriaSeleccionada">
+      Seleccione un género para filtrar:
+      <select  [(ngModel)]="filterMovie" >
         <option value="">Todas las categorías</option>
         <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
       </select>
-
-   
     </ul>
      
-    <!---->
-
-    <!--input type="text" class="form-control" name="filterMovie" placeholder="Escribir categoria" [(ngModel)]="filterMovie"-->
-
   </div>
 
   <br>
   <div class="portfolio__gallery">
-    <!-- Aqui poner filtro -->
     <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-4">
         <app-movie *ngFor="let movie of movieArray | filter:filterMovie"  [movieCH]="movie"></app-movie>
       

@@ -1,37 +1,94 @@
 <header class="flex w-full fixed top-0 z-1">
-    <!--w-full= agarra todo el ancho, fixed= fuera del dom-->
-    <nav class="flex justify-content-between w-full navbar">
-        <span class="logo cursor-pointer">
-            <img src="../../../assets/images/cinemaWebLogo.png" alt="Logo">
-        </span>
-        <div class="header__info flex align-items-center gap-3">
-            <ul class="flex flex-column xl:flex-row list-none">
-                <li  (click)="onShowCreateMovie()">Añadir nueva pelicular
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<!-- añadir nueva pelicua --> 
-<div class="product-detail" [class.active]="showCreateMovie">
-    <div >
-      <button (click)="onShowCreateMovie()">Close</button>
-
-        <h3>Subir banner</h3>
-
-     <input type="file" accept=".jpg,.png" (change)="uploadImage($event)">
-
-
-      <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
-        <input type="text" name="title" ngModel> <br>
-
-        <!--input type="file" accept=".jpg,.png" name="image" ngModel class="button"/> <br--> 
-
-        <input type="number" name="rating" ngModel> <br>
-        <input type="text" name="genre" ngModel> <br>
-        <input type="date" name="date" ngModel> <br>
-        <input type="text" name="sysnopsis" ngModel> <br>
-        <button type="submit" (click)="onShowCreateMovie()">Guardar</button>
-      </form>
+  <!--w-full= agarra todo el ancho, fixed= fuera del dom-->
+  <nav class="flex justify-content-between w-full navbar">
+    <span class="logo cursor-pointer">
+      <img src="../../../assets/images/cinemaWebLogo.png" alt="Logo">
+    </span>
+    <div class="header__info flex align-items-center gap-3">
+      <ul class="flex flex-column xl:flex-row list-none">
+        <li (click)="onShowCreateMovie()">Añadir nueva pelicular
+        </li>
+      </ul>
     </div>
+  </nav>
+</header>
+<!-- añadir nueva pelicua -->
+<div class="form__newMovie" [class.active]="showCreateMovie">
+
+
+  <div class="card">
+
+    <a href="#" class="close" (click)="onShowCreateMovie()"></a>
+
+    <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
+    <div class="field">
+      <label for="firstname1">Baner de pelicula</label>
+      <input type="file" accept=".jpg,.png" (change)="uploadImage($event)"
+        class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary">
+    </div>
+
+    <div class="field">
+      <label for="firstname1">Titulo</label>
+      <input id="firstname1" type="text" name="title" ngModel
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    </div>
+
+    <div class="formgrid grid">
+      <div class="field col">
+        <label for="firstname2">Rating (entre 1 a 5)</label>
+        <input id="firstname2" type="number" name="rating" ngModel  min="1" max="5"
+          class="input__form text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+      <div class="field col">
+        <label for="firstname2">Genero</label>
+      
+          <select name="genre" ngModel class="input__form text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full " >
+            <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+          </select>
+        </div>
+      <div class="field col">
+        <label for="lastname2">Fecha</label>
+        <input type="date" name="date" ngModel
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+      <div class="field col-12">
+        <label for="address">Address</label>
+        <textarea id="address" type="text" rows="4" name="sysnopsis" ngModel
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+      </div>
+      <button type="submit" (click)="onShowCreateMovie()" class=" w-full text-white bg-primary-500 border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700">Guardar pelicua</button>
+      
+    </div>
+    </form>
   </div>
+
+
+
+
+
+  <!--
+  <div>
+    <h3>Subir banner</h3>
+
+    <input type="file" accept=".jpg,.png" (change)="uploadImage($event)">
+
+
+    <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
+      <input type="text" name="title" ngModel> <br>
+
+  
+
+      <input type="number" name="rating" ngModel> <br>
+      <input type="text" name="genre" ngModel list="cityname">
+      <datalist id="cityname">
+        <option value="Boston">
+        <option value="Cambridge">
+      </datalist>
+      <br>
+      <input type="date" name="date" ngModel> <br>
+      <input type="text" name="sysnopsis" ngModel> <br>
+      <button type="submit" (click)="onShowCreateMovie()">Guardar</button>
+    </form>
+  </div>
+-->
+</div>
