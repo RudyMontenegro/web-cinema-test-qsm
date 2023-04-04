@@ -7,7 +7,7 @@
 
 <p>
   <a href="https://angular.io/">
-    <img src="	https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"
+    <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"
          alt="Gitter">
   </a>
   <a href="https://firebase.google.com/?gclid=Cj0KCQjwz6ShBhCMARIsAH9A0qWAPrAPqoS3YC36Bb4q1UwoVNfbgUlZ91BSzMBruPAWzOe7_Vm2iNkaAo46EALw_wcB&gclsrc=aw.ds&hl=es-419"><img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black">
