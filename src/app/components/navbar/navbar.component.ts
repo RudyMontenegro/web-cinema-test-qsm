@@ -30,12 +30,13 @@ export class NavbarComponent {
 }
 ngOnInit() {
   this.getImages();
+
 }
   onSubmit(data: Movie){
     data.date = new Date(data.date)
     data.image = this.images[0];
     this.movieService.addMovie(data);
-    console.warn(data)
+  
   }
 
 onShowCreateMovie(){

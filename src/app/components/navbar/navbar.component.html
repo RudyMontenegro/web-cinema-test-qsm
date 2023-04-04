@@ -20,7 +20,7 @@
 
     <a href="#" class="close" (click)="onShowCreateMovie()"></a>
 
-    <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
+    <form #movieForm="ngForm" id="myForm" (ngSubmit)="onSubmit(movieForm.value)">
     <div class="field">
       <label for="firstname1">Baner de pelicula</label>
       <input type="file" accept=".jpg,.png" (change)="uploadImage($event)"
@@ -56,12 +56,16 @@
         <textarea id="address" type="text" rows="4" name="sysnopsis" ngModel
           class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
       </div>
-      <button type="submit" (click)="onShowCreateMovie()" class=" w-full text-white bg-primary-500 border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700">Guardar pelicua</button>
+      <button type="submit" (click)="onShowCreateMovie()" onclick="myFunction()" class=" w-full text-white bg-primary-500 border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700">Guardar pelicua</button>
       
     </div>
     </form>
   </div>
-
+  <script>
+    function myFunction() {
+      document.getElementById("myForm").reset();
+    }
+    </script>
 
 
 
